@@ -40,6 +40,7 @@ function PostForm({ post }) {
             if (file) {
                 const fileId = file.$id
                 data.featuredImage = fileId
+                console.log(fileId);
                 try {
                     let dbPost = await appwriteService.createPost({
                         ...data,
@@ -50,6 +51,7 @@ function PostForm({ post }) {
                     }
                 } catch (error) {
                     prompt(error.message)
+                    console.log('error n post db page', error.message)
                 } finally {setLoading(false)}
             }
 
