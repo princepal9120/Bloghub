@@ -1,9 +1,9 @@
 import React from 'react'
-import { Container,  Button } from '../Components'
+import {  Button } from '../Components'
 import { useSelector } from 'react-redux'
 import notebookImage from "/Blog1.jpg"
 import { useNavigate } from 'react-router-dom'
-
+import  Container  from '../components/Container/Container.jsx'
 function Home() {
     const status = useSelector(state => state.auth.status)
 

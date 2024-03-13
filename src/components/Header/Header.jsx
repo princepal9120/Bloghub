@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { LogoutBtn, Container, Logo, Button } from "../index";
+import { LogoutBtn, Logo, Button } from "../index";
+import Container from "../container/Container";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import hamburgerIcon from "/icon-hamburger.svg";
@@ -43,7 +44,7 @@ function Header() {
 
   return (
     <header className="py-3 md:py-4 shadow  sticky top-0 z-50 px-0 md:px-10 bg-[#182d52]/30 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
-      <Container>
+      <>
         <nav className="flex justify-between flex-wrap items-center">
           <div className="">
             <Link to="/" onClick={closeNavbar}>
@@ -100,7 +101,7 @@ function Header() {
             )}
           </ul>
         </nav>
-      </Container>
+      </>
     </header>
   );
 }
